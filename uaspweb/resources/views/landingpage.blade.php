@@ -76,7 +76,7 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <div class="text-center fs-1">
-                <p>jadi untuk hari ini kita membuat website dari penggunaan laravel berupa website blog atau informasi tentang blog agribisnis yaitu IAGROW</p>
+                <p>IAGROW Website penyedia informasi terkait agriculture</p>
                 </div>
         </section>
         <!-- About Section-->
