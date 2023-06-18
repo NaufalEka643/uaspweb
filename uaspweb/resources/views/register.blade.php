@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>IAGROW - Login</title>
+    <title>IAGROW - Register</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
@@ -38,26 +38,29 @@
                 <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                 <div class="divider-custom-line"></div>
             </div>
-            <p class="masthead-subheading font-weight-light mb-0 fs-3">Login to your account</p>
+            <p class="masthead-subheading font-weight-light mb-0 fs-3">Create your account</p>
         </div>
     </header>
 
-    <section class="page-section-sm bg-primary text-white mb-0" id="about">
+    <section class="page-section-sm bg-primary text-white mb-0" id="register">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mx-auto">
-                    <form action="{{ route('login') }}" method="POST">
-                        @csrf
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">username</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your username">
+                        </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Enter your password" name="password" required autocomplete="current-password">
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password">
                         </div>
                         <div class="text-center mt-4 mb-4">
-                            <button type="submit" class="btn btn-xl btn-outline-light">Login</button>
+                            <button type="submit" class="btn btn-xl btn-outline-light">Register</button>
                         </div>
                     </form>
                 </div>
