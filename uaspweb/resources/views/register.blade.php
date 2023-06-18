@@ -46,21 +46,32 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mx-auto">
-                    <form>
+                    <form action="{{ route('register') }}" method="POST">
+                        @csrf
                         <div class="mb-3">
                             <label for="name" class="form-label">username</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your username">
+                            <input type="text" class="form-control" id="name" placeholder="Enter your username" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" value="{{ old('email') }}" required autocomplete="email">
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password" name="password" required autocomplete="new-password">
                         </div>
-                        <div class="text-center mt-4 mb-4">
-                            <button type="submit" class="btn btn-xl btn-outline-light">Register</button>
+                        
+                        <div class="mb-3">
+                            <label for="password-confirm" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="password-confirm" placeholder="Enter your password" name="password_confirmation" required autocomplete="new-password">
+                        </div>
+
+                        <div class="row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Register') }}
+                                </button>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -103,3 +114,4 @@
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 </html>
+

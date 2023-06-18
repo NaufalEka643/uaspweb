@@ -30,10 +30,9 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::get('/artikel', function () {
-    return view('/artikel');
+Route::middleware('auth')->group(function () {
+    //
 });
-
 
 Route::get('/artikel', [ArtikelController::class, 'show'])->name('artikel.show');
 Route::post('/add_process', [ArtikelController::class, 'add_process']);
