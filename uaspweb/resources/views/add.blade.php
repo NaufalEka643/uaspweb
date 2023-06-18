@@ -2,7 +2,7 @@
 @extends('master')
  
 <!-- membuat komponen title sebagai judul halaman -->
-@section('title', 'Menambah Artikel')
+{{-- @section('title', 'Menambah Artikel') --}}
  
 <!-- membuat komponen main yang berisi form untuk mengisi judul dan isi artikel -->
 @section('main')

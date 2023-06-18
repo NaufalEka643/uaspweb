@@ -1,9 +1,9 @@
 @extends('master')
  
 <!-- memberikan judul di tab sesuai dengan judul artikel yang sedang dibaca -->
-@section('title')
+{{-- @section('title')
 {{ $article->judul }}
-@endsection
+@endsection --}}
  
 <!-- menampilkan gambar, judul, dan isi artikel -->
 @section('main')

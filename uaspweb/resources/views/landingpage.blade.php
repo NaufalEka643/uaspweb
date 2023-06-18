@@ -29,8 +29,20 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/">Home</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/artikel">Artikel</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/register">Register</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/login">Login</a></li>
+                        @if (Route::has('login'))
+                                @auth
+                                    <li class="nav-item mx-0 mx-lg-1">
+                                        <form action="{{ route('logout') }}" method="POST">
+                                            @csrf
+                                            <button type="submit" class="nav-link py-3 px-0 px-lg-3 rounded">Logout</button>
+                                        </form>
+                                    </li>
+                                @else
+                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/register">Register</a></li>
+                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/login">Login</a></li>
+                                @endauth
+                            </div>
+                        @endif
                     </ul>
                 </div>
             </div>
@@ -64,7 +76,7 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <div class="text-center fs-1">
-                <p>IAGROW Website penyedia informasi terkait agriculture</p>
+                <p>jadi untuk hari ini kita membuat website dari penggunaan laravel berupa website blog atau informasi tentang blog agribisnis yaitu IAGROW</p>
                 </div>
         </section>
         <!-- About Section-->
